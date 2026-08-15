@@ -51,14 +51,18 @@
             and grow your social presence—all from one calm, secure app.
           </p>
           <div class="store-actions" id="download">
-            <button class="store-button" type="button" data-store="apple">
-              <span class="store-symbol apple-symbol" aria-hidden="true">●</span>
-              <span><small>Coming soon on the</small><strong>App Store</strong></span>
-            </button>
-            <button class="store-button store-button-light" type="button" data-store="google">
-              <span class="play-symbol" aria-hidden="true"></span>
-              <span><small>Coming soon on</small><strong>Google Play</strong></span>
-            </button>
+            <div class="store-option">
+              <button class="store-badge-button" type="button" data-store="apple" aria-label="App Store download coming soon">
+                <img class="store-badge store-badge-apple" src="/assets/store-badges/app-store.svg" alt="Download on the App Store" />
+              </button>
+              <span class="store-status">Coming soon</span>
+            </div>
+            <div class="store-option">
+              <button class="store-badge-button" type="button" data-store="google" aria-label="Google Play download coming soon">
+                <img class="store-badge store-badge-google" src="/assets/store-badges/google-play.png" alt="Get it on Google Play" />
+              </button>
+              <span class="store-status">Coming soon</span>
+            </div>
           </div>
           <div class="hero-proof" aria-label="Billy product highlights">
             <div><strong>6+</strong><span>useful services</span></div>
@@ -198,8 +202,14 @@
         <h2 id="download-title">Your money app<br /><em>is almost here.</em></h2>
         <p>Private testing is underway on Android and iPhone. Store downloads will open here when Billy is ready.</p>
         <div class="store-actions centered-actions">
-          <button class="store-button" type="button" data-store="apple"><span class="store-symbol apple-symbol" aria-hidden="true">●</span><span><small>Coming soon on the</small><strong>App Store</strong></span></button>
-          <button class="store-button store-button-light" type="button" data-store="google"><span class="play-symbol" aria-hidden="true"></span><span><small>Coming soon on</small><strong>Google Play</strong></span></button>
+          <div class="store-option">
+            <button class="store-badge-button" type="button" data-store="apple" aria-label="App Store download coming soon"><img class="store-badge store-badge-apple" src="/assets/store-badges/app-store.svg" alt="Download on the App Store" /></button>
+            <span class="store-status">Coming soon</span>
+          </div>
+          <div class="store-option">
+            <button class="store-badge-button" type="button" data-store="google" aria-label="Google Play download coming soon"><img class="store-badge store-badge-google" src="/assets/store-badges/google-play.png" alt="Get it on Google Play" /></button>
+            <span class="store-status">Coming soon</span>
+          </div>
         </div>
       </section>
     </main>
@@ -209,6 +219,7 @@
       <p>Money moves better here.</p>
       <div><a href="#features">Features</a><a href="#security">Security</a><a href="#download">Get Billy</a></div>
       <small>© <span data-year></span> Billy. All rights reserved.</small>
+      <small class="store-legal">Apple and the Apple logo are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</small>
     </footer>
 
     <div class="toast" role="status" aria-live="polite" data-toast>
