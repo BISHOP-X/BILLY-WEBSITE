@@ -56,21 +56,21 @@ h1, h2, h3 { font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", sans-serif; 
 h1 { font-size: clamp(60px, 7.8vw, 112px); font-weight: 850; line-height: .9; margin: 26px 0 30px; }
 h1 em, h2 em { color: var(--lime); font-style: normal; }
 .headline-fixed { display: block; }
-.service-rotator { color: var(--lime); display: block; font-size: .88em; height: 1.02em; line-height: .98; overflow: hidden; position: relative; white-space: nowrap; }
+.service-rotator { color: var(--lime); display: block; font-size: .88em; height: 1.18em; line-height: 1.04; overflow: hidden; position: relative; white-space: nowrap; }
 .service-word { inset: 0 auto auto 0; opacity: 0; position: absolute; transform: translateY(110%); transition: opacity .48s ease, transform .58s cubic-bezier(.22,.9,.3,1); }
 .service-word.is-active { opacity: 1; transform: translateY(0); }
 .service-word.is-exiting { opacity: 0; transform: translateY(-110%); }
 .service-word.is-resetting { transition: none; }
 .hero-lede { color: rgba(255,255,255,.68); font-size: clamp(17px, 1.45vw, 21px); line-height: 1.7; margin: 0; max-width: 650px; }
 .store-actions { align-items: flex-start; display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
-.store-option { align-items: center; display: grid; gap: 6px; justify-items: center; }
-.store-badge-button { appearance: none; background: transparent; border: 0; border-radius: 10px; cursor: pointer; display: grid; height: 58px; padding: 0; place-items: center; transition: filter .2s, transform .2s; }
+.store-option { align-items: center; display: flex; flex-direction: column; min-width: 210px; }
+.store-badge-button { appearance: none; background: transparent; border: 0; border-radius: 10px; cursor: pointer; display: grid; height: 80px; padding: 0; place-items: center; transition: filter .2s, transform .2s; width: 210px; }
 .store-badge-button:hover, .store-badge-button:focus-visible { filter: drop-shadow(0 12px 20px rgba(0,0,0,.28)); transform: translateY(-3px); }
 .store-badge-button:focus-visible { outline: 3px solid var(--lime); outline-offset: 4px; }
 .store-badge { display: block; object-fit: contain; }
 .store-badge-apple { height: 54px; width: auto; }
 .store-badge-google { height: 80px; width: auto; }
-.store-status { color: rgba(255,255,255,.54); font-size: 10px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.store-status { color: rgba(255,255,255,.54); display: block; font-size: 10px; font-weight: 750; letter-spacing: .08em; line-height: 1.2; margin-top: 10px; text-transform: uppercase; }
 .hero-proof { border-top: 1px solid rgba(255,255,255,.12); display: flex; gap: 42px; margin-top: 42px; padding-top: 28px; }
 .hero-proof div { display: grid; gap: 2px; }
 .hero-proof strong { color: var(--lime); font-size: 23px; }
@@ -154,9 +154,13 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
 .bill-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
 .bill-pills span { background: #edf5ef; border: 1px solid #d3e6d7; border-radius: 999px; color: var(--green); font-size: 11px; font-weight: 800; padding: 10px 15px; }
 .stacked-cards { height: 90px; margin: 26px auto 0; position: relative; width: 170px; }
-.stacked-cards span { background: var(--ink); border: 1px solid rgba(255,255,255,.2); border-radius: 15px; height: 78px; left: 20px; position: absolute; top: 0; transform: rotate(-5deg); width: 130px; }
-.stacked-cards span:nth-child(2) { background: var(--green); transform: rotate(4deg); }
-.stacked-cards span:nth-child(3) { background: linear-gradient(135deg, #fff, #dff1e4); transform: rotate(-1deg); }
+.stacked-cards > span { background: var(--ink); border: 1px solid rgba(255,255,255,.2); border-radius: 15px; height: 78px; left: 20px; position: absolute; top: 0; transform: rotate(-5deg); width: 130px; }
+.stacked-cards > span:nth-child(2) { background: var(--green); transform: rotate(4deg); }
+.stacked-cards > span:nth-child(3) { background: linear-gradient(135deg, #fff, #dff1e4); transform: rotate(-1deg); }
+.gift-card-face { align-content: space-between; color: var(--ink); display: grid; grid-template-columns: auto 1fr; padding: 11px 13px; }
+.gift-card-face img { background: var(--green); border-radius: 8px; height: 24px; padding: 4px; width: 24px; }
+.gift-card-face small { align-self: center; font-size: 8px; font-weight: 900; letter-spacing: .12em; text-align: right; }
+.gift-card-face strong { font-size: 10px; grid-column: 1 / -1; letter-spacing: .1em; }
 .coin-row { display: flex; margin-top: 34px; }
 .coin-row span { align-items: center; background: var(--lime); border: 4px solid var(--ink); border-radius: 50%; color: var(--ink); display: flex; font-size: 21px; font-weight: 900; height: 54px; justify-content: center; margin-left: -8px; width: 54px; }
 .coin-row span:first-child { margin-left: 0; }
@@ -277,7 +281,7 @@ footer small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.08);
     max-width: 620px;
   }
   .hero .store-actions { margin-top: 24px; }
-  .hero .store-badge-button { height: 54px; }
+  .hero .store-badge-button { height: 74px; }
   .hero .store-badge-apple { height: 50px; }
   .hero .store-badge-google { height: 74px; }
   .hero-proof {
@@ -343,7 +347,7 @@ footer small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.08);
   .nav-cta { margin-top: 4px; text-align: center; }
   .hero { min-height: auto; padding: 125px 20px 70px; }
   h1 { font-size: clamp(52px, 17vw, 78px); }
-  .service-rotator { font-size: .72em; height: 1.12em; }
+  .service-rotator { font-size: .72em; height: 1.3em; line-height: 1.08; }
   .service-word { left: 50%; right: auto; transform: translate(-50%, 110%); }
   .service-word.is-active { transform: translate(-50%, 0); }
   .service-word.is-exiting { transform: translate(-50%, -110%); }
