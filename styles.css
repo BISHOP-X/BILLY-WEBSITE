@@ -242,12 +242,17 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
 .download-section h2 { margin: 25px 0; position: relative; z-index: 1; }
 .download-section > p:not(.eyebrow) { color: rgba(255,255,255,.55); font-size: 17px; line-height: 1.7; max-width: 590px; position: relative; z-index: 1; }
 .centered-actions { justify-content: center; position: relative; z-index: 1; }
+.web-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 28px 0 8px; position: relative; z-index: 1; }
+.web-primary, .web-secondary { align-items: center; border-radius: 999px; display: inline-flex; font-weight: 850; justify-content: center; min-height: 52px; padding: 0 24px; text-decoration: none; }
+.web-primary { background: var(--lime); color: var(--ink); }
+.web-secondary { border: 1px solid rgba(255,255,255,.28); color: white; }
 .download-orb { background: radial-gradient(circle, rgba(54,194,108,.24), transparent 68%); height: 800px; left: 50%; position: absolute; top: -280px; transform: translateX(-50%); width: 800px; }
 
 footer { align-items: center; background: #030a06; color: rgba(255,255,255,.5); display: grid; font-size: 12px; gap: 20px; grid-template-columns: auto 1fr auto; padding: 34px max(5vw, 24px); }
 .footer-brand img { height: 30px; }
 footer p { margin: 0; }
 footer > div { display: flex; gap: 22px; }
+.footer-legal { opacity: .78; }
 footer a:hover { color: white; }
 footer small { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.08); padding-top: 18px; }
 
